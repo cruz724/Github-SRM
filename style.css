@@ -1,0 +1,326 @@
+@font-face {
+    font-family: montserrat;
+    src: url(Montserrat-Medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: montserrat, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+}
+
+.logo {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 40px;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.nav-links {
+    width: 850px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: 
+        url(assets/heroimg_events.87fea314.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed; /* Keeps the background fixed */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, #000 100%); /* Gradient overlay */
+    z-index: 1; /* Ensures the gradient is on top of the background image */
+}
+
+.hero-section-content {
+    position: relative;
+    z-index: 2; /* Keeps the content above the gradient */
+    color: white; /* Example text color */
+}
+
+
+
+.content {
+    text-align: center;
+    justify-content:center;
+    background-color: #202020;
+    width: 83vw;
+    height: 61vh;
+    border-radius: 10px;
+}
+
+.center-image {
+    width: 250px;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.max{
+    background-color: #000;
+}
+
+.events-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.events-section h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.highlight {
+    color: #00E43D;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    padding: 0 20px; /* Reduced space around the cards */
+    justify-items: center; /* Center-align cards */
+    row-gap: 100px; /* Reduced space between cards vertically */
+}
+
+.event-item {
+    text-align: center;
+    width: 400px; /* Set fixed width for the cards */
+    height: 400px;
+    margin-bottom: 50px;
+}
+
+.event-image {
+    width: 100%;
+    height: 400px; /* Set fixed height for the images */
+    border: 4px solid #00E43D;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.event-image:hover {
+    box-shadow: 0 0 25px 25px rgba(12, 93, 38, 0.7);
+}
+
+.event-func{
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+}
+
+.event-item h3 {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.certificate-btn {
+    display: inline-block;
+    background-color: #00E43D;
+    color: #000;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .events-container {
+        grid-template-columns: 1fr; 
+        padding: 0 20px;
+    }
+
+    .event-item {
+        width: 400px;
+        height: 400px; 
+    }
+
+    .event-image {
+        height: auto;
+    }
+
+    .nav-links {
+        display: none; /* Hide the navigation links on smaller screens */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-icon {
+        display: none;
+    }
+}
+
+ 
+/* ----------------------footer------------------------ */
+
+.footer {
+    background: linear-gradient(to top, #052D16 0%, #072014 40%, #081A13 70%, black 100%);
+    padding: 50px 0;
+    color: #fff;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-logo {
+    width: 210px; 
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #A1A1AA;
+}
+
+.footer-right {
+    text-align: left ;
+}
+
+.footer-right h4 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    filter: invert(100%);
+    transition: transform 0.3s ease;
+    
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2); 
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.footer-bottom span {
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .footer-right {
+        margin-top: 50px;
+    }
+}
+
+.arrow {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent; 
+    color: #ffffff;
+    border: 2px solid #00E43D; 
+    border-radius: 50%;
+    font-size: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.arrow:hover {
+    background-color: #00E43D;
+}
+
